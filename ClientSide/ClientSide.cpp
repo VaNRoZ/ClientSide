@@ -696,5 +696,51 @@ void Client::userHasLeftChatroom()
 		}
 	}
 	//707
+	cout << name << "TEMPHas left teh chatroom" << endl;
+	chatroom_partners.erase(chatroom_partners.begin() + i);
 
+}
+
+//all tah users in file
+void Client::gotUsersList()
+{
+	int usersCount;
+	string userName;
+
+	usersCount = reacommand(server_sock);//size of list
+	for (int me = 0;me < usersCount; me++)
+	{
+		userName = readMsg(server_sock);
+		cout << "User #" << i + 1 << ": " << userName << endl;
+	}
+}
+
+void Client::chatromWasClosed() //delete
+{
+	if (isRoomOwner == true)
+	{
+		cout << "You're room was closed" << endl;
+		isRoomOwner = false;
+		isInCahtRoom = false;
+		chatroom_partners.clear();
+		chatName.clear();
+	}
+	else
+	{
+		cout << "The chatroom was closed by the owner" << endl;
+		isInChatRoom = false;
+		chatroom_partners.clear();
+		chatName.clear();
+	}
+}
+
+void Client::userHasJoinedChatroom()
+{
+	string name;
+	string ip_and_port;
+	string port;
+	char delim = ':';
+	bool foundDelim - false;
+
+	//751
 }
