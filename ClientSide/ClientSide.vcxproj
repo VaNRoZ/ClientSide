@@ -152,6 +152,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ClientSide.cpp" />
+    <ClCompile Include="Peer2Peer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ClientSide.h" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="Peer2Peer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
